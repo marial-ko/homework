@@ -27,6 +27,8 @@ namespace Координтная_плоскость
                 Console.Write("Точка на оси Y");
             else if (doty == 0)
                 Console.Write("Точка на оси X");
+            else if (dotx == 0 & doty == 0)
+                Console.Write("Точка совпадает с началом координат");
             else
                 Console.Write("Введено неверное значение");
 
