@@ -22,16 +22,16 @@ namespace Массивы
                 numbers[i] = ElementsOfArray(y, i);
             }
 
-            //foreach (var number in numbers)
-            //    Console.Write("{0:F3} ",number);
             PrintArray(numbers);
             Console.WriteLine();
             SumOfElements(numbers);
             Console.WriteLine();
             Module(numbers);
-            Console.WriteLine();
-            ArrayOfDifferences(numbers, y);
 
+            double[] copy = (double[])numbers.Clone();
+            Console.WriteLine();
+            ArrayOfDifferences(copy, y);
+            
             Console.ReadKey();
         }
 
@@ -73,6 +73,7 @@ namespace Массивы
             Console.WriteLine("Сумма модулей = {0}", sum);
         }
 
+        
         static void ArrayOfDifferences (double[] elements, double a)
         {
             for (var x=0; x<elements.Length; x++)
